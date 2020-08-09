@@ -37,3 +37,8 @@ blue = make_color(34)
 magenta = make_color(35)
 cyan = make_color(36)
 white = make_color(37)
+
+# different grayscal
+# \x1b[38;5;232m\x1b[0m `to` \x1b[38;5;255m\x1b[0m
+# ok --> \x1b[38;5;255mok\x1b[0m
+grayscale = {(i - 232): make_color('38;5;' + str(i)) for i in range(232, 256)}
